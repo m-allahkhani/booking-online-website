@@ -1,0 +1,208 @@
+body{
+    background-color:rgba(48,159,255,1);
+    font-size: 16px;
+}
+#header-nav{
+    background-color: azure;
+    border: 0;
+    border-radius: 0;
+}
+#logo-img{
+    width: 150px;
+    height: 150px;
+    margin: 10px 15px 10px 0;
+}
+.navbar-brand{
+    padding-top: 20px;
+}
+.navbar-brand h1{
+    font-family: 'Lora', serif;
+    color: rgb(14, 4, 195);
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgb(33, 1, 89);
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: .75;
+    
+}
+.navbar-brand a{
+    text-decoration: none;
+}
+
+.navbar-header {
+    clear: both;
+    margin-top: -30px;
+}
+
+li{
+    flex: right;
+    padding: 12px;
+}
+#profile-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+}
+
+.icon.active #profile-options {
+  display: block;
+}
+
+#nav-list{
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+
+#nav-list  a{
+    text-decoration: none;
+    color: inherit;
+}
+li:hover{
+    color: rgb(51, 178, 228); 
+ }
+
+ #header-menu li{
+    margin-left: 3px;
+ }
+
+ #img-main{
+    width: 100%;
+    border: 2px solid rgb(63, 43, 146);
+    /* box-shadow: 0 0 50px rgb(255, 255, 255); */
+    margin-top: 10%;
+    max-height: 40vw;
+}
+#image{
+    text-align: center;
+}
+  #flight-tile, #train-tile, #hotel-tile, #suite-tile {
+    height: 150px;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    position: relative;
+    border: 2px solid #3F0C1F;
+    overflow: hidden;
+}
+#train-tile:hover, #flight-tile:hover, #hotel-tile:hover ,#suite-tile:hover {
+    box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+#home-tiles img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+#flight-tile span, #hotel-tile span, #suite-tile span ,#train-tile span{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    background-color: #000;
+    color: #fff;
+    opacity: .8;
+}
+hr{
+    color: white;
+    width:50%;
+    margin: auto;
+    display: none;
+}
+.panel-footer {
+    margin-top: 30px;
+    padding-top: 35px;
+    padding-bottom: 30px;
+    background-color: rgb(17, 0, 58);
+    border-top: 0;
+  }
+  .panel-footer div.row {
+    margin-bottom: 35px;
+  }
+  #contact, #about, #follow {
+    line-height: 2;
+  }
+  #contact > span, #follow > span , #about> span{
+    font-size: 1.3em;
+    color: azure;
+  }
+  #contact p ,#follow p ,#about p {
+    color : #5845b3;
+    font-size: .8em;
+    line-height: 1.8;
+  }
+
+  footer:hover{
+    cursor: pointer;
+}
+ 
+
+@media (min-width: 1200px) {
+   
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Header */
+  #logo-img {
+    height: 100px;
+    width: 80px;
+    margin: 5px 5px 5px 0;
+  }
+
+  
+  /* End Header */
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+    
+}
+
+@media (max-width: 575px) {
+    
+  }
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) { 
+
+    #logo-img{
+        display: none;
+    }
+    .navbar-brand  h1 {
+        text-align: center;
+      }
+  /* Header */
+  .navbar-brand {
+    padding-top: 10px;
+    height: 80px;
+  }
+  .navbar-brand h1 { 
+    padding-top: 10px;
+    font-size: 5vw; 
+  }
+ 
+  /* End Header */
+
+  
+}
+
+@media (max-width: 479px) {
+    /* Header */
+    .navbar-brand h1 { /* Restaurant name */
+      padding-top: 5px;
+      font-size: 6vw;
+    }
+    /* End Header */
+    
+  }

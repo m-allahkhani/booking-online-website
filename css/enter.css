@@ -1,0 +1,252 @@
+body{
+    background-color:rgba(48,159,255,1);
+    font-size: 16px;
+}
+.enter{
+    width: 100%;
+    background-color: white;
+     margin: auto;
+     box-sizing: border-box;
+     margin-top: 10%;
+     border-radius: 10px;
+     text-align: center;
+     margin-top: 10%;
+     min-height: 20vw;
+     height: 40vh;
+}
+input[type="text"]{
+    width: 80%;
+    padding: 2%;
+    border: none;
+    border-bottom: 2px solid rgb(41, 126, 224);
+    margin: .7em;
+    
+}
+input[type="text"]:focus{
+    outline: none;
+    border-bottom: 5px solid rgb(41, 126, 224);
+}
+input[type="text"]::placeholder {
+    text-align: left;
+} 
+
+
+input[type="tel"]{
+    width: 80%;
+    padding: 2%;
+    border: none;
+    border-bottom: 2px solid rgb(41, 126, 224);
+    margin: .7em;
+    
+}
+input[type="tel"]:focus{
+    outline: none;
+    border-bottom: 5px solid rgb(41, 126, 224);
+}
+input[type="tel"]::placeholder {
+    text-align: left;
+} 
+
+
+input[type="email"]{
+    width: 80%;
+    padding: 2%;
+    border: none;
+    border-bottom: 2px solid rgb(41, 126, 224);
+    margin: .7em;
+   
+}
+input[type="email"]:focus{
+    outline: none;
+    border-bottom: 5px solid rgb(41, 126, 224);
+}
+input[type="email"]::placeholder {
+    text-align: left;
+} 
+input[type="password"]{
+    width: 80%;
+    padding: 2%;
+    border: none;
+    border-bottom: 2px solid rgb(41, 126, 224);
+    margin: .7em;
+    
+}
+input[type="password"]:focus{
+    outline: none;
+    border-bottom: 5px solid rgb(41, 126, 224);
+}
+input[type="password"]::placeholder {
+    text-align: left;
+} 
+/*------------------------------------------*/
+
+input[type="date"]{
+    width: 80%;
+    padding: 2%;
+    border: none;
+    border-bottom: 2px solid rgb(41, 126, 224);
+    margin: .7em;
+    
+}
+input[type="date"]:focus{
+    outline: none;
+    border-bottom: 5px solid rgb(41, 126, 224);
+}
+input[type="date"]::placeholder {
+    text-align: left;
+} 
+
+
+
+
+input[type="button"]{
+    width: 85%;
+    height: 10%;
+    background: rgb(0,199,255);
+    background: linear-gradient(90deg, rgba(0,199,255,1) 0%, rgba(56,211,255,1) 45%,
+     rgba(120,221,250,1) 80%);
+     border: none;
+     margin: .7em;
+     color: white;
+     margin-bottom: 10%;
+     margin-top: 10%;
+}
+input[type="button"]:focus{
+    background: rgb(120,221,250);
+    background: linear-gradient(90deg, rgba(120,221,250,1) 0%,
+     rgba(56,211,255,1) 45%, rgba(0,199,255,1) 80%);
+     
+}
+a{
+    color: rgb(0, 166, 255);
+    text-decoration: none;
+}
+
+#header-nav{
+    background-color: azure;
+    border: 0;
+    border-radius: 0;
+}
+#logo-img{
+    width: 150px;
+    height: 150px;
+    margin: 10px 15px 10px 0;
+}
+.navbar-brand{
+    padding-top: 20px;
+}
+.navbar-brand h1{
+    font-family: 'Lora', serif;
+    color: rgb(14, 4, 195);
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgb(33, 1, 89);
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: .75;
+    
+}
+.navbar-brand a{
+    text-decoration: none;
+}
+
+.navbar-header {
+    clear: both;
+    margin-top: -30px;
+}
+
+li{
+    flex: right;
+    padding: 12px;
+}
+
+#nav-list{
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+
+#nav-list  a{
+    text-decoration: none;
+    color: inherit;
+}
+li:hover{
+    color: rgb(51, 178, 228); 
+ }
+
+ #header-menu li{
+    margin-left: 3px;
+ }
+
+ 
+@media (min-width: 1200px) {
+    .enter{
+        width: 60vw;
+      }
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Header */
+  #logo-img {
+    height: 100px;
+    width: 80px;
+    margin: 5px 5px 5px 0;
+  }
+  .enter{
+    width: 40%;
+  }
+
+  
+  /* End Header */
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+    .enter{
+        width: 50vw;
+     }
+}
+
+
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) { 
+
+    #logo-img{
+        display: none;
+    }
+    .navbar-brand  h1 {
+        text-align: center;
+      }
+  /* Header */
+  .navbar-brand {
+    padding-top: 10px;
+    height: 80px;
+  }
+  .navbar-brand h1 { 
+    padding-top: 10px;
+    font-size: 5vw; 
+  }
+ 
+  /* End Header */
+
+ .enter{
+    width: 60vw;
+ }
+
+ 
+}
+
+@media (max-width: 479px) {
+    /* Header */
+    .navbar-brand h1 { /* Restaurant name */
+      padding-top: 5px;
+      font-size: 6vw;
+    }
+    /* End Header */
+    #main-content *,header{
+        font-size: 10px;
+    }
+    /* Home page */
+  }

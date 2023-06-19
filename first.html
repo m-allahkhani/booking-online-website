@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <script src="bootstrap-5.3.0-alpha3-dist/js/jquery-3.7.0.min.js"></script>
+    <script src="bootstrap-5.3.0-alpha3-dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="bootstrap-5.3.0-alpha3-dist/js/bootstrap.bundle.min.js"></script>
+<header>
+    <nav id="header-nav" class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="first.html" class="visible-md visible-lg">
+                    <img id="logo-img" class="img-fluid visible-lg" src="css\logo.jpg" alt="logo-img">
+                </a>
+            </div>
+            <div class="navbar-brand ">
+                <a href="first.html"><h1>Online Reservation</h1></a>
+            </div>
+        </div>
+       
+        <div id="header-menu">
+            <ul id="nav-list" class="nav navbar-nav">
+                <li> <a href="first.html"><p><i class="fa fa-home icon-3x"></i> <br class="hidden-xs"> HOME </p> </a></li>
+                <li> <a href="flight.html"><p><i class="fa fa-plane"></i><br class="hidden-xs"> FLIGHT</p></a></li>
+                <li><a href="train.html"><p><i class="fa fa-train"></i><br class="hidden-xs"> TRAIN</p></a></li>
+                <li><a href="hotel.html"><p><i class="fa fa-hotel"></i><br class="hidden-xs"> HOTEL</p></a></li>
+                <li><a href="suite.html"><p><i class="fa fa-building"></i><br class="hidden-xs"> SUITE</p></a></li>
+                <li><p><i class="fa fa-info-circle" onclick="scrollToFooter()"></i><br class="hidden-xs"> ABOUT</p></li>
+                <!-- <li><p><i class="fa fa-user"><select id="user-options" name="user-options" class="form-select">
+                    <option value="">Select </option>
+                    <option value="login"><a href="login.html"></a></option>
+                    <option value="update"><a href="update.html"></a></option>
+                    <option value="signin"><a href="signin.html"></a></option></i><br class="hidden-xs">Profile</p></li> -->
+                    <li>  <i class="fa fa-user" id="profile-icon"></i>
+                    <select id="profile-options">
+                      <option value="">Choose an option</option>
+                      <option value="login.html">login</option>
+                      <option value="signin.html">signin</option>
+                      <option value="update.html">edit</option>
+                    </select>
+                </li>
+            </ul>
+            
+        </div>   
+    </nav>
+</header>
+<script>
+    // Get the profile icon element and add a click event listener
+    document.getElementById('profile-icon').addEventListener('click', function() {
+      // Toggle the active class on the parent div to show/hide the options
+      this.parentNode.classList.toggle('active');
+    });
+    
+    // Get the profile options select element and add a change event listener
+    document.getElementById('profile-options').addEventListener('change', function() {
+      // Get the selected value and open the corresponding webpage in a new tab
+      var selectedValue = this.options[this.selectedIndex].value;
+      if (selectedValue !== '') {
+        window.open(selectedValue, '_blank');
+      }
+    });
+  </script>
+
+
+<div id="main-content" class="container">
+    <div id="image">
+        <img id="img-main" src="css/travel.jpg" alt="travel" class="img-fluid visible-xs">
+    </div>
+
+    <div id="home-tiles" class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <a href="train.html">
+                <div id="train-tile">
+                    <img class="img-fluid" src="css/train.jpg"/>
+                    <span>train</span>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <a href="flight.html">
+                <div id="flight-tile">
+                    <img class="img-fluid" src="css/flight.jpg"/>
+                    <span>flight</span>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <a href="hotel.html">
+                <div id="hotel-tile">
+                    <img class="img-fluid" src="css/hotel.jpg"/>
+                    <span>hotel</span>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <a href="suite.html">
+                <div id="suite-tile">
+                    <img class="img-fluid" src="css/suite.jpg"/>
+                    <span>suite</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+    
+  <footer class="panel-footer">
+    <div class="container">
+      <div class="row">
+        <section id="contact" class="col-sm-4">
+          <span>Contact Us</span>
+          <p>Email: info@onlinereservations.com<br>
+            Phone: 1-800-555-1234<br>
+            Address: 123 Main Street, Anytown USA</p>
+          <hr  class="visible-xs">
+        </section>
+        <section id="follow" class="col-sm-4">
+          <span>Follow Us</span><br>
+          <p>Facebook | Twitter | Instagram</p>
+
+          <hr  class="visible-xs">
+        </section>
+        <section id="about" class="col-sm-4">
+            <span>About Us</span><br>
+            <p>
+            Online Reservation is dedicated to providing our customers with the best deals on hotels, flights, and train tickets. Our team of travel experts is committed to making your travel experience as smooth and enjoyable as possible.
+            </p>
+            <hr class="visible-xs">
+          </section>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+    function scrollToFooter() {
+      window.location.href = ".panel-footer";
+    }
+  </script>
+</body>
+</html>

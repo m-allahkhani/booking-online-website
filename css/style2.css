@@ -2,6 +2,75 @@ body{
     background-color:rgba(48,159,255,1);
     font-size: 16px;
 }
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spinner {
+  width: 50px;
+  height: 50px;
+  /* Center the spinner */
+  position: relative;
+  margin: 0 auto;
+  }
+  
+  .spinner::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-top-color: #0074D9;
+  animation: spin 1s linear infinite;
+  transform-origin: center center;
+  }
+  
+  .spinner::after {
+  content: "Online Reservation";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: bold;
+  color: #0074D9; /* Blue color */
+  opacity: 0;
+  animation: text 1s linear infinite;
+  }
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  } 
+
+@keyframes text {
+0% {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1);
+}
+50% {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+100% {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1);
+}
+} 
+
+
+
 #header-nav{
     background-color: azure;
     border: 0;
@@ -74,7 +143,7 @@ li:hover{
     border: 2px solid rgb(63, 43, 146);
     /* box-shadow: 0 0 50px rgb(255, 255, 255); */
     margin-top: 10%;
-    max-height: 40vw;
+    max-height: 30vw;
 }
 #image{
     text-align: center;
@@ -148,7 +217,7 @@ hr{
  
 
 @media (min-width: 1200px) {
-   
+  
 }
 
 /********** Medium devices only **********/
@@ -159,9 +228,9 @@ hr{
     width: 80px;
     margin: 5px 5px 5px 0;
   }
-
-  
-  /* End Header */
+  /* #img-main{
+    height: 30vh;
+  } */
 }
 
 /********** Small devices only **********/
@@ -198,11 +267,11 @@ hr{
 }
 
 @media (max-width: 479px) {
-    /* Header */
-    .navbar-brand h1 { /* Restaurant name */
+ 
+    .navbar-brand h1 { 
       padding-top: 5px;
       font-size: 6vw;
     }
-    /* End Header */
+    
     
   }

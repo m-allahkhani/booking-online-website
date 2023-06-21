@@ -10,7 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/signin.js"></script>
      <style>
         .enter{
             height: 60vh;
@@ -20,15 +23,37 @@
             height: 40vh;
         }
         }
+
+        .toast {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(240, 78, 78);
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+         }
      </style>
 
 
 </head>
 <body>
-    <script src="bootstrap-5.3.0-alpha3-dist/js/jquery-3.7.0.min.js"></script>
     <script src="bootstrap-5.3.0-alpha3-dist/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="bootstrap-5.3.0-alpha3-dist/js/bootstrap.bundle.min.js"></script>
+    
+    <div id="loading">
+        <div class="spinner"></div>
+      </div>
+      <script>
+        window.addEventListener('load', () => {
+          setTimeout(() => {
+              document.getElementById("loading").style.display = "none";
+            }, 1000); 
+      });
+      </script>
+
 <header>
     <nav id="header-nav" class="navbar navbar-default">
         <div class="container">
@@ -49,19 +74,20 @@
                 <li><a href="train.html"><p><i class="fa fa-train"></i><br class="hidden-xs"> TRAIN</p></a></li>
                 <li><a href="hotel.html"><p><i class="fa fa-hotel"></i><br class="hidden-xs"> HOTEL</p></a></li>
                 <li><a href="suite.html"><p><i class="fa fa-building"></i><br class="hidden-xs"> SUITE</p></a></li>
-                <li><p><i class="fa fa-info-circle" onclick="scrollToFooter()"></i><br class="hidden-xs"> ABOUT</p></li>
             </ul>
         </div>   
     </nav>
 </header>
 <div id="main-content" class="container">
+    <div class="toast">
+    </div>
     <div class="enter">
         <header>create account</header>
-        <input type="tel"  placeholder="Phone Number">
-        <input type="email"  placeholder="Email">
-        <input type="password"  placeholder="Password">
-        <input type="password"  placeholder="Confirm Password">
-        <input type="button" value="signin">
+        <input type="tel" id="phone" placeholder="Phone Number">
+        <input type="email"  id="email" placeholder="Email">
+        <input type="password" id="password1" placeholder="Password">
+        <input type="password" id="password2" placeholder="Confirm Password">
+        <input type="button" id="submitBtn" value="signin">
         
     </div>
 

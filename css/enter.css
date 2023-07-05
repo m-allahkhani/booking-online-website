@@ -100,6 +100,14 @@ input[type="text"]:focus{
 input[type="text"]::placeholder {
     text-align: left;
 } 
+.form-select{
+    width: 80%;
+    padding: 2%;
+    margin: .7em;
+    border: none;
+    border-bottom: 2px solid rgb(41, 126, 224);
+    padding: 12px;
+}
 
 
 input[type="tel"]{

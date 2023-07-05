@@ -1,27 +1,27 @@
 function isValid(username, password) {
   return username.trim() !== '' && password.trim() !== '';
- }
+}
 
- function showToast(message) {
-  $(".toast").html('<p>'+message+'</p>');
-  $('.toast').show();
+function showToast(message) {
+  document.querySelector(".toast").innerHTML = '<p>'+message+'</p>';
+  document.querySelector('.toast').style.display = 'block';
   setTimeout(function() {
-    $(".toast").hide();
+    document.querySelector(".toast").style.display = 'none';
   }, 1000);
- }
+}
 
- jQuery(document).ready(function($) {
-  $('#submitBtn').click(function() {
-   var username = $('#username').val();
-   var password = $('#password').val();
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('#submitBtn').addEventListener('click', function() {
+    var username = document.querySelector('#username').value;
+    var password = document.querySelector('#password').value;
 
-   if (isValid(username, password)) {
-    // $('body').css('background-color', 'pink');
-    alert('Form submitted successfully!');
-    // do the login stuff
-   } else {
-    showToast('Invalid username or password');
-    // $('body').css('background-color', 'red');
-   }
+    if (isValid(username, password)) {
+      // document.body.style.backgroundColor = 'pink';
+      alert('Form submitted successfully!');
+      // do the login stuff
+    } else {
+      showToast('Invalid username or password');
+      // document.body.style.backgroundColor = 'red';
+    }
   });
- });
+});

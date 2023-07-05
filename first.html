@@ -24,9 +24,9 @@
     </div>
     <script>
       window.addEventListener('load', () => {
-	    // setTimeout(() => {
+	     setTimeout(() => {
 		    document.getElementById("loading").style.display = "none";
-	      // }, 1000); 
+	       }, 2000); 
     });
     </script>
 <header>
@@ -49,22 +49,26 @@
                 <li><a href="train.html"><p><i class="fa fa-train"></i><br class="hidden-xs"> TRAIN</p></a></li>
                 <li><a href="hotel.html"><p><i class="fa fa-hotel"></i><br class="hidden-xs"> HOTEL</p></a></li>
                 <li><a href="suite.html"><p><i class="fa fa-building"></i><br class="hidden-xs"> SUITE</p></a></li>
-                <li><p><i class="fa fa-info-circle" onclick="scrollToFooter()"></i><br class="hidden-xs"> ABOUT</p></li>
-                <!-- <li><p><i class="fa fa-user"><select id="user-options" name="user-options" class="form-select">
-                    <option value="">Select </option>
-                    <option value="login"><a href="login.html"></a></option>
-                    <option value="update"><a href="update.html"></a></option>
-                    <option value="signin"><a href="signin.html"></a></option></i><br class="hidden-xs">Profile</p></li> -->
-                    <li>  <i class="fa fa-user" id="profile-icon"></i>
-                    <select id="profile-options">
-                      <option value="">Choose an option</option>
-                      <option value="login.html">login</option>
-                      <option value="signin.html">signin</option>
-                      <option value="update.html">edit</option>
-                    </select>
-                </li>
+                <li>
+                    <i class="fa fa-user" id="profile-icon">
+                      <br>
+                      <select class="form-select" id="profile-select" onchange="redirectToPage(this)">
+                        <option value="">user</option>
+                        <option value="signin.html">sign in</option>
+                        <option value="login.html">login</option>
+                        <option value="update.html">edit</option>
+                      </select>
+                    </i>
+                  </li>
             </ul>
-            
+            <script>
+                function redirectToPage(select) {
+                  var url = select.value;
+                  if (url) {
+                    window.location.href = url;
+                  }
+                }
+              </script>
         </div>   
     </nav>
 </header>

@@ -1,0 +1,58 @@
+.hotel-name {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .hotel-address {
+    color: #555;
+    font-size: 16px;
+  }
+  
+  .hotel-stars {
+    color: #FFD700; /* Gold color */
+    font-size: 18px;
+  }
+  
+  .facility-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .facility-list li {
+    color: rgb(0, 51, 171);
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .facility-list li:hover {
+    background-color: transparent;
+  }
+
+  
+  .form-label {
+    font-weight: bold;
+}
+
+.btn-primary {
+    margin-top: 10px;
+}
+
+#form-div {
+    border: 1px solid gray;
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 12px;
+    background-color: aliceblue;
+    text-align: center;
+    height: 45%;
+}
+.form-select{
+  width: 80%;
+}
+@media (min-width: 767px) { 
+  #form-div {
+    height: 35%;
+  }
+}

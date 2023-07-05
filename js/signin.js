@@ -1,48 +1,36 @@
-function isValid( password1,password2,email,phone_num) {
-  // if(password1.trim() !== ''){
-  //   $('body').css('background-color', 'yellow');
-  // }
-  // if(password2.trim() !== ''){
-  //   $('body').css('background-color', 'red');
-  // }
-  // if(email.trim() !== ''){
-  //   $('body').css('background-color', 'pink');
-  // }
-  // if(phone_num.trim() !== ''){
-  //   $('body').css('background-color', 'orange');
-  // }
-  if(password2 === password1){
-    $('body').css('background-color', 'green');
-  }
-    return password1.trim() !== '' && password2.trim() !== '' && password1 === password2 
-            && email.trim() !== '' && phone_num.trim() !== '';
-   }
-  
-   function showToast(message) {
-    $(".toast").html('<p>'+message+'</p>');
-    $('.toast').show();
-    setTimeout(function() {
-      $(".toast").hide();
-    }, 1000);
-   }
-  
-   jQuery(document).ready(function($) {
-    $('#submitBtn').click(function() {
-     
-     var password1 = $('#password1').val();
-     var password2 = $('#password2').val();
-     var email = $('#email').val();
-     var phone_num = $('#phone').val();  
-     
-     if (isValid( password1,password2,email,phone_num)) {
-      // $('body').css('background-color', 'pink');
-      // alert('Form submitted successfully!');
+
+function isValid(password1, password2, email, phone_num,first_name,last_name,adddress,birthday) {
+  return password1.trim() !== '' && password2.trim() !== '' && password1 === password2 
+          && email.trim() !== '' && phone_num.trim() !== ''&& first_name.trim() !== ''
+          && last_name.trim() !== ''&& adddress.trim() !== ''&& birthday.trim() !== '';
+}
+
+function showToast(message) {
+  document.querySelector(".toast").innerHTML = '<p>'+message+'</p>';
+  document.querySelector('.toast').style.display = 'block';
+  setTimeout(function() {
+    document.querySelector(".toast").style.display = 'none';
+  }, 1000);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('#submitBtn').addEventListener('click', function() {
+
+    var password1 = document.querySelector('#password1').value;
+    var password2 = document.querySelector('#password2').value;
+    var email = document.querySelector('#email').value;
+    var phone_num = document.querySelector('#phone').value;  
+    var first_name = document.querySelector('#firstName').value;
+    var last_name = document.querySelector('#lastName').value;
+    var adddress = document.querySelector('#adddress').value;
+    var birthday = document.querySelector('#birthday').value;
+    if (isValid(password1, password2, email, phone_num,first_name,last_name,adddress,birthday)) {
+      // document.body.style.backgroundColor = 'pink';
+   
       // do the login stuff
-     } else {
-      // $('body').css('background-color', 'red');
-      showToast('Something is  please fill the form again');
-     
-     }
-    });
-   });
-  
+    } else {
+      // document.body.style.backgroundColor = 'red';
+      showToast('Something is wrong. Please fill the form again.');
+    }
+  });
+});

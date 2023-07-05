@@ -1,0 +1,50 @@
+resultsDiv.innerHTML = '';
+  
+data.forEach(function(suite) {
+    var suiteDiv = document.createElement("div");
+    suiteDiv.setAttribute("class", "ticket row");
+
+    var logoDiv = document.createElement("div");
+    logoDiv.setAttribute("class", "logo col-auto");
+
+    var logoElement = document.createElement("img");
+    logoElement.src = suite.mainPhoto;
+    logoElement.classList.add("img-fluid");
+    logoDiv.appendChild(logoElement);
+
+    var infoDiv = document.createElement("div");
+    infoDiv.setAttribute("class", "info col");
+
+    var detailsDiv = document.createElement("div");
+    detailsDiv.setAttribute("class", "details d-flex flex-wrap");
+    
+    var kindElement = document.createElement("p");
+    kindElement.textContent = suite.kind;
+
+    var roomsNumElement = document.createElement("p");
+    roomsNumElement.textContent = suite.roomsNum + " rooms";
+
+    var priceElement = document.createElement("p");
+    priceElement.setAttribute("class", "price ");
+    priceElement.textContent = "Price: $" + suite.price;
+
+    var briefAddElement = document.createElement("p");
+    briefAddElement.textContent = "Address: " + suite.briefAdd;
+
+    detailsDiv.appendChild(kindElement);
+    detailsDiv.appendChild(roomsNumElement);
+    detailsDiv.appendChild(priceElement);
+    detailsDiv.appendChild(briefAddElement);
+
+    infoDiv.appendChild(detailsDiv);
+
+    var reserveButton = document.createElement("button");
+    reserveButton.setAttribute("class", "reserve-button btn btn-success");
+    reserveButton.textContent = "Reserve";
+
+    suiteDiv.appendChild(logoDiv);
+    suiteDiv.appendChild(infoDiv);
+    suiteDiv.appendChild(reserveButton);
+
+    resultsDiv.appendChild(suiteDiv);
+});

@@ -26,11 +26,32 @@ document.addEventListener('DOMContentLoaded', function() {
     var birthday = document.querySelector('#birthday').value;
     if (isValid(password1, password2, email, phone_num,first_name,last_name,adddress,birthday)) {
       // document.body.style.backgroundColor = 'pink';
-   
-      // do the login stuff
+      var data = {
+        first_name: first_name,
+        last_name: last_name,
+        phone_number: phone_num,
+        email: email,
+        password: password1,
+        address: adddress,
+        birthday: birthday,
+      };
+
+      //  request to the backend using AJAX
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/your/backend/endpoint/", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            console.log(xhr.responseText);
+          } else {
+          showToast("Error "+ xhr.status+"Please try again")
+          }
+        };
+        xhr.send(JSON.stringify(data));
+      
     } else {
-      // document.body.style.backgroundColor = 'red';
-      showToast('Something is wrong. Please fill the form again.');
+     
+      showToast('Please fill the form again.');
     }
   });
 });

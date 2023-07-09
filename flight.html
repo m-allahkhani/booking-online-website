@@ -53,6 +53,17 @@
                 <li><a href="hotel.html"><p><i class="fa fa-hotel"></i><br class="hidden-xs"> HOTEL</p></a></li>
                 <li><a href="suite.html"><p><i class="fa fa-building"></i><br class="hidden-xs"> SUITE</p></a></li>
                 <!-- <li><p><i class="fa fa-info-circle" onclick="scrollToFooter()"></i><br class="hidden-xs"> ABOUT</p></li> -->
+                <li>
+                    <i class="fa fa-user" id="profile-icon">
+                      <br>
+                      <select class="form-select" id="profile-select" onchange="redirectToPage(this)">
+                        <option value="">user</option>
+                        <option value="signin.html">sign in</option>
+                        <option value="login.html">login</option>
+                        <option value="update.html">edit</option>
+                      </select>
+                    </i>
+                  </li>
             </ul>
         </div>   
     </nav>
@@ -63,34 +74,34 @@
     <form>
         <div class="row">
             <div class="col-md-6 col-sm-6 col-xs-12">
-                <label for="origin" class="form-label">From:</label>
+               
                 <input type="text" id="origin" name="origin" class="form-control" placeholder="Origin city" >
             </div>
             <div class="col-md-6 col-sm-6 col-xs-12">
-                <label for="destination" class="form-label">To:</label>
+                
                 <input type="text" id="destination" name="destination" class="form-control" placeholder="Destination city" >
             </div> 
             <div class="col-md-6 col-sm-12 col-xs-12">
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
-                        <label for="depart" class="form-label">Depart:</label>
-                        <input type="date" id="depart" name="depart" class="form-control" >
+                        
+                        <input type="text" id="depart" name="depart" class="form-control" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Enter your depart" >
                     </div>
                     <div class="col-md-6 col-sm-6">
-                        <label for="return" class="form-label">Return:</label>
-                        <input type="date" id="return" name="return" class="form-control">
+                        
+                        <input type="text" id="return" name="return" class="form-control"  onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Enter your return">
                     </div>
                 </div>
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12">
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
-                        <label for="adults" class="form-label">Adults:</label>
-                        <input type="number" id="adults" name="adults" class="form-control" min="1" max="10" value="1" >
+                        
+                        <input type="text" id="adults" name="adults" class="form-control" min="1" max="10"   onfocus="(this.type='number')" onblur="(this.type='text')" placeholder="Enter number of adults" >
                     </div>
                     <div class="col-md-6 col-sm-6">
-                        <label for="children" class="form-label">Children:</label>
-                        <input type="number" id="children" name="children" class="form-control" min="0" max="10" value="0" >   
+                        
+                        <input type="text" id="children" name="children" class="form-control" min="0" max="10"   onfocus="(this.type='number')" onblur="(this.type='text')" placeholder="Enter number of children">   
                          <!-- required -->
                     </div>
                 </div>

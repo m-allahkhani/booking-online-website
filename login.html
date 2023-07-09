@@ -75,7 +75,17 @@
                 <li><a href="train.html"><p><i class="fa fa-train"></i><br class="hidden-xs"> TRAIN</p></a></li>
                 <li><a href="hotel.html"><p><i class="fa fa-hotel"></i><br class="hidden-xs"> HOTEL</p></a></li>
                 <li><a href="suite.html"><p><i class="fa fa-building"></i><br class="hidden-xs"> SUITE</p></a></li>
-               
+                <li>
+                    <i class="fa fa-user" id="profile-icon">
+                      <br>
+                      <select class="form-select" id="profile-select" onchange="redirectToPage(this)">
+                        <option value="">user</option>
+                        <option value="signin.html">sign in</option>
+                        <option value="login.html">login</option>
+                        <option value="update.html">edit</option>
+                      </select>
+                    </i>
+                  </li>
             </ul>
         </div>   
     </nav>

@@ -1,102 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage</title>
-    <link rel="stylesheet" href="bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/enter.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     <style>
-        .enter{
-            height: 110vh;
+    <link
+      rel="stylesheet"
+      href="bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/enter.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      .enter {
+        height: 110vh;
+      }
+      input[type="button"] {
+        margin-top: 5%;
+      }
+      @media (max-width: 479px) {
+        .enter {
+          height: 70vh;
         }
-        input[type="button"]{
-            margin-top: 5%;
+        input[type="button"] {
+          margin-top: 15%;
         }
-        @media (max-width: 479px) {
-            .enter{
-            height: 70vh;
-        }
-        input[type="button"]{
-            margin-top: 15%;
-        }
-        }
-     </style>
-
-
-</head>
-<body>
+      }
+    </style>
+  </head>
+  <body>
     <script src="bootstrap-5.3.0-alpha3-dist/js/jquery-3.7.0.min.js"></script>
     <script src="bootstrap-5.3.0-alpha3-dist/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="bootstrap-5.3.0-alpha3-dist/js/bootstrap.bundle.min.js"></script>
 
-
     <div id="loading">
-        <div class="spinner"></div>
-      </div>
-      <script>
-        window.addEventListener('load', () => {
-          // setTimeout(() => {
-              document.getElementById("loading").style.display = "none";
-            // }, 1000); 
+      <div class="spinner"></div>
+    </div>
+    <script>
+      window.addEventListener("load", () => {
+        // setTimeout(() => {
+        document.getElementById("loading").style.display = "none";
+        // }, 1000);
       });
-      </script>
+    </script>
 
-
-
-<header>
-    <nav id="header-nav" class="navbar navbar-default">
+    <header>
+      <nav id="header-nav" class="navbar navbar-default">
         <div class="container">
-            <div class="navbar-header">
-                <a href="first.html" class="visible-md visible-lg">
-                    <img id="logo-img" class="img-fluid visible-lg" src="css\logo.jpg" alt="logo-img">
-                </a>
-            </div>
-            <div class="navbar-brand ">
-                <a href="first.html"><h1>Online Reservation</h1></a>
-            </div>
+          <div class="navbar-header">
+            <a href="first.html" class="visible-md visible-lg">
+              <img
+                id="logo-img"
+                class="img-fluid visible-lg"
+                src="css\logo.jpg"
+                alt="logo-img"
+              />
+            </a>
+          </div>
+          <div class="navbar-brand">
+            <a href="first.html"><h1>Online Reservation</h1></a>
+          </div>
         </div>
-       
+
         <div id="header-menu">
-            <ul id="nav-list" class="nav navbar-nav">
-                <li> <a href="first.html"><p><i class="fa fa-home icon-3x"></i> <br class="hidden-xs"> HOME </p> </a></li>
-                <li> <a href="flight.html"><p><i class="fa fa-plane"></i><br class="hidden-xs"> FLIGHT</p></a></li>
-                <li><a href="train.html"><p><i class="fa fa-train"></i><br class="hidden-xs"> TRAIN</p></a></li>
-                <li><a href="hotel.html"><p><i class="fa fa-hotel"></i><br class="hidden-xs"> HOTEL</p></a></li>
-                <li><a href="suite.html"><p><i class="fa fa-building"></i><br class="hidden-xs"> SUITE</p></a></li>
-                <li><p><i class="fa fa-info-circle" onclick="scrollToFooter()"></i><br class="hidden-xs"> ABOUT</p></li>
-            </ul>
-        </div>   
-    </nav>
-</header>
-<div id="main-content" class="container">
-    <div class="enter">
+          <ul id="nav-list" class="nav navbar-nav">
+            <li>
+              <a href="first.html"
+                ><p>
+                  <i class="fa fa-home icon-3x"></i> <br class="hidden-xs" />
+                  HOME
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="flight.html"
+                ><p>
+                  <i class="fa fa-plane"></i><br class="hidden-xs" />
+                  FLIGHT
+                </p></a
+              >
+            </li>
+            <li>
+              <a href="train.html"
+                ><p>
+                  <i class="fa fa-train"></i><br class="hidden-xs" />
+                  TRAIN
+                </p></a
+              >
+            </li>
+            <li>
+              <a href="hotel.html"
+                ><p>
+                  <i class="fa fa-hotel"></i><br class="hidden-xs" />
+                  HOTEL
+                </p></a
+              >
+            </li>
+            <li>
+              <a href="suite.html"
+                ><p>
+                  <i class="fa fa-building"></i><br class="hidden-xs" />
+                  SUITE
+                </p></a
+              >
+            </li>
+            <li>
+              <i class="fa fa-user" id="profile-icon">
+                <br />
+                <select
+            
+                  class="form-select"
+                  id="profile-select"
+                  onchange="redirectToPage(this)">
+                  <option value="">user</option>
+                  <option value="signin.html">sign in</option>
+                  <option value="login.html">login</option>
+                  <option value="update.html">edit</option>
+                </select>
+              </i>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div id="main-content" class="container">
+      <div class="toast"></div>
+      <div class="enter">
         <!-- <header>Your Account</header> -->
-        <input type="text"  placeholder="First Name">
-        <input type="text"  placeholder="Last Name">
-        <input type="tel"  placeholder="Phone Number">
-        <input type="email"  placeholder="Email">
-        <input type="password"  placeholder="Password">
-        <input type="text"  placeholder="Address">
-        <input type="date"  placeholder="Birthday">
-        <input type="button" value="update">
-        
+        <input type="text" placeholder="First Name" />
+        <input type="text" placeholder="Last Name" />
+        <input type="tel" placeholder="Phone Number" />
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <input type="text" placeholder="Address" />
+        <input type="date" placeholder="Birthday" />
+        <input id="updateBtn" type="button" value="update" />
+      </div>
     </div>
 
+    <script>
+      function showToast(message) {
+        document.querySelector(".toast").innerHTML = "<p>" + message + "</p>";
+        document.querySelector(".toast").style.display = "block";
+        setTimeout(function () {
+          document.querySelector(".toast").style.display = "none";
+        }, 1000);
+      }
 
-    
-  
-</div>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("updateBtn")
+          .addEventListener("click", function (event) {
+            var firstName = document.querySelector(
+              'input[placeholder="First Name"]'
+            ).value;
+            var lastName = document.querySelector(
+              'input[placeholder="Last Name"]'
+            ).value;
+            var phoneNumber = document.querySelector(
+              'input[placeholder="Phone Number"]'
+            ).value;
+            var email = document.querySelector(
+              'input[placeholder="Email"]'
+            ).value;
+            var password = document.querySelector(
+              'input[placeholder="Password"]'
+            ).value;
+            var address = document.querySelector(
+              'input[placeholder="Address"]'
+            ).value;
+            var birthday = document.querySelector(
+              'input[placeholder="Birthday"]'
+            ).value;
 
-<script>
-   
-  </script>
-</body>
+            var data = {
+              first_name: firstName,
+              last_name: lastName,
+              phone_number: phoneNumber,
+              email: email,
+              password: password,
+              address: address,
+              birthday: birthday,
+            };
+
+            //  request to the backend using AJAX
+    //         var xhr = new XMLHttpRequest();
+    //         xhr.open("POST", "/your/backend/endpoint/", true);
+    //         xhr.setRequestHeader("Content-Type", "application/json");
+    //         xhr.onload = function () {
+    //           if (xhr.status === 200) {
+    //             console.log(xhr.responseText);
+    //           } else {
+                showToast("Error "+ xhr.status+"Please try again")
+    //           }
+    //         };
+    //         xhr.send(JSON.stringify(data));
+          });
+      });
+    </script>
+  </body>
 </html>

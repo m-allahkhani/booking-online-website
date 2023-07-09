@@ -74,6 +74,17 @@
                 <li><a href="train.html"><p><i class="fa fa-train"></i><br class="hidden-xs"> TRAIN</p></a></li>
                 <li><a href="hotel.html"><p><i class="fa fa-hotel"></i><br class="hidden-xs"> HOTEL</p></a></li>
                 <li><a href="suite.html"><p><i class="fa fa-building"></i><br class="hidden-xs"> SUITE</p></a></li>
+                <li>
+                    <i class="fa fa-user" id="profile-icon">
+                      <br>
+                      <select class="form-select" id="profile-select" onchange="redirectToPage(this)">
+                        <option value="">user</option>
+                        <option value="signin.html">sign in</option>
+                        <option value="login.html">login</option>
+                        <option value="update.html">edit</option>
+                      </select>
+                    </i>
+                  </li>
             </ul>
         </div>   
     </nav>
@@ -89,6 +100,7 @@
         <input type="date" id="birthday" placeholder="Birthday">
         <input type="tel" id="phone" placeholder="Phone Number">
         <input type="email"  id="email" placeholder="Email">
+        <label for="password1" class="Complecity"></label>
         <input type="password" id="password1" placeholder="Password">
         <input type="password" id="password2" placeholder="Confirm Password">
         <input type="button" id="submitBtn" value="signin">
@@ -101,6 +113,47 @@
 </div>
 
 <script>
+    
+
+
+const passwordInput = document.getElementById("password1");
+
+passwordInput.addEventListener('input', () => {
+  if (passwordInput.value !== '') {
+    document.querySelector(".Complecity").innerHTML = "<p>" + calculatePasswordStrength(passwordInput.value)+"%" + "</p>";
+    document.querySelector(".Complecity").style.display = "block";
+  } else {
+    document.querySelector(".Complecity").style.display = "none";
+  }
+});
+
+
+function calculatePasswordStrength(password) {
+  let complexity = 0;
+
+  // Criteria for complexity
+  const criteria = {
+    length: 8,
+    uppercase: /[A-Z]/,
+    lowercase: /[a-z]/,
+    number: /[0-9]/,
+    special: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/
+  };
+
+  // Calculate complexity
+
+  if (password.length >= criteria.length) complexity += 25;
+  if (criteria.uppercase.test(password)) complexity += 25;
+  if (criteria.lowercase.test(password)) complexity += 25;
+  if (criteria.number.test(password)) complexity += 25;
+  if (criteria.special.test(password)) complexity += 25;
+
+  // Calculate percentage
+  const percentage = complexity;
+
+  return percentage;
+}
+
    
   </script>
 </body>

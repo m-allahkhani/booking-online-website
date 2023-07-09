@@ -1,0 +1,66 @@
+As a frontend developer, you would typically not be responsible for creating the backend API that serves the ticket data. That would be the responsibility of a backend developer.
+
+However, as a frontend developer, you will need to know how to retrieve data from the API using JavaScript and display it on the webpage.
+
+Here is an example of how the ticket data could be retrieved using the Fetch API and displayed on the page:
+
+<div id="tickets"></div>
+<script>
+  fetch('https://example.com/api/tickets')
+    .then(response => response.json())
+    .then(data => {
+      const ticketsDiv = document.getElementById('tickets');
+      data.forEach(ticket => {
+        const ticketElement = document.createElement('div');
+        ticketElement.innerHTML = `
+          <h2>${ticket.title}</h2>
+          <p><strong>Origin:</strong> ${ticket.origin}</p>
+          <p><strong>Destination:</strong> ${ticket.destination}</p>
+          <p><strong>Date:</strong> ${ticket.date}</p>
+          <p><strong>Time:</strong> ${ticket.time}</p>
+          <p><strong>Price:</strong> ${ticket.price}</p>
+        `;
+        ticketsDiv.appendChild(ticketElement);
+      });
+    })
+    .catch(error => console.error(error));
+</script>
+In this example, the ticket data is fetched from the backend API using the fetch function. The response is converted to JSON format using the response.json() method.
+
+The ticket data is then iterated over using the forEach method and HTML elements are dynamically created to display each ticket's information. These HTML elements are then appended to the tickets div on the webpage.
+
+Note that the specific URL and format of the response would depend on the backend technology being used to serve the data. So, the backend developer is responsible for creating an API endpoint that returns the ticket data in a consistent format that can be consumed by the frontend.
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------
+To send error messages in a webpage using toast, you can use a JavaScript library such as Toastr or Toastify. Here's an example of how to use Toastr:
+
+1. First, include the Toastr library and its CSS file in your HTML file:
+
+```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+```
+
+2. Next, call the `toastr.error()` function whenever you want to display an error message. For example:
+
+```javascript
+// Display an error message with the text "Something went wrong!"
+toastr.error('Something went wrong!');
+```
+
+You can also customize the appearance of the toast by passing additional options to the `toastr.error()` function. For example:
+
+```javascript
+// Display an error message with a custom title and longer duration
+toastr.error('Something went wrong!', 'Error', {timeOut: 5000});
+```
+
+This will display a red toast with the title "Error" and the text "Something went wrong!" for 5 seconds before disappearing.

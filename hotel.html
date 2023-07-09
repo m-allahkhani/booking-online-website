@@ -54,7 +54,17 @@
                 <li><a href="train.html"><p><i class="fa fa-train"></i><br class="hidden-xs"> TRAIN</p></a></li>
                 <li><a href="hotel.html"><p><i class="fa fa-hotel"></i><br class="hidden-xs"> HOTEL</p></a></li>
                 <li><a href="suite.html"><p><i class="fa fa-building"></i><br class="hidden-xs"> SUITE</p></a></li>
-                <li><p><i class="fa fa-info-circle" onclick="scrollToFooter()"></i><br class="hidden-xs"> ABOUT</p></li>
+                <li>
+                    <i class="fa fa-user" id="profile-icon">
+                      <br>
+                      <select class="form-select" id="profile-select" onchange="redirectToPage(this)">
+                        <option value="">user</option>
+                        <option value="signin.html">sign in</option>
+                        <option value="login.html">login</option>
+                        <option value="update.html">edit</option>
+                      </select>
+                    </i>
+                  </li>
             </ul>
         </div>     
     </nav>
@@ -65,30 +75,30 @@
   <form>
     <div class="row">
         <div class="col-md-6 col-sm-6 col-xs-12">
-            <label for="destination" class="form-label">Destination:</label>
+            
             <input type="text" id="destination" name="destination" class="form-control" placeholder="Destination city" required>
         </div> 
         
                 <div class="col-md-3 col-sm-6 col-xs-12">
-                    <label for="check-in" class="form-label">Check-in:</label>
-                    <input type="date" id="check-in" name="check-in" class="form-control" required>
+                    
+                    <input type="text" id="check-in" name="check-in" class="form-control" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Check in" required>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
-                    <label for="check-out" class="form-label">Check-out:</label>
-                    <input type="date" id="check-out" name="check-out" class="form-control">
+                   
+                    <input type="text" id="check-out" name="check-out" class="form-control"  onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Check out">
                 </div>
            
                 <div class="col-md-4 col-sm-6 col-xs-12">
-                    <label for="adults" class="form-label">Adults:</label>
-                <input type="number" id="adults" name="adults" class="form-control" min="1" max="10" value="1" required>
+                  
+                <input type="text" id="adults" name="adults" class="form-control" min="1" max="10"  onfocus="(this.type='number')" onblur="(this.type='text')" placeholder="Enter number of adults" required>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
-                    <label for="children" class="form-label">Children:</label>
-                    <input type="number" id="children" name="children" class="form-control" min="0" max="10" value="0" required>    
+                    
+                    <input type="text" id="children" name="children" class="form-control" min="0" max="10"  onfocus="(this.type='number')" onblur="(this.type='text')" placeholder="Enter number of children"  required>    
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12">
-                  <label for="rooms" class="form-label">Rooms:</label>
-                  <input type="number" id="rooms" name="rooms" class="form-control" min="0" max="10" value="0" required>    
+                  
+                  <input type="text" id="rooms" name="rooms" class="form-control" min="0" max="10"  onfocus="(this.type='number')" onblur="(this.type='text')" placeholder="Enter numberof rooms"required>    
               </div>
               
               <div class="col-12 d-flex justify-content-center">

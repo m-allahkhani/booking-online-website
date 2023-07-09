@@ -3,14 +3,24 @@
     font-size: 24px;
     font-weight: bold;
   }
-  
+  .toast {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(240, 78, 78);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+  } 
   .hotel-address {
     color: #555;
     font-size: 16px;
   }
   
   .hotel-stars {
-    color: #FFD700; /* Gold color */
+    color:  #C0C0C0; /* #aaa9ad*/
     font-size: 18px;
   }
   
@@ -48,11 +58,35 @@
     text-align: center;
     height: 45%;
 }
+
+.form-div {
+  border: 1px solid gray;
+  padding: 30px;
+  margin-top: 20px;
+  border-radius: 12px;
+  background-color: aliceblue;
+  text-align: center;
+  height: 45%;
+}
 .form-select{
   width: 80%;
 }
 @media (min-width: 767px) { 
   #form-div {
-    height: 35%;
+    height: 40%;
   }
+}
+#submitBtn {
+  margin-right: 8px;
+  padding: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #0022e2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 40%;
+  /* display: flex;
+  justify-content: center; */
 }

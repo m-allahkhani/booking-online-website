@@ -1,4 +1,6 @@
-
+.form-control{
+  margin: 20px;
+}
   .form-control:focus, .form-select:focus {
     border-color: #fcfcfc;
     box-shadow: 0 0 0 0.25rem rgba(31, 70, 111, 0.2);
@@ -22,7 +24,7 @@
      cursor: pointer;
   }
   input{
-    box-shadow: 0 2px 4px #888;
+    box-shadow: 0 2px 4px rgb(32, 30, 30);
   }
 /*flight -------------------------------------------- */
 .toast {

@@ -55,15 +55,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (!isValid(destination, checkIn, checkOut, people)) {
         showToast("Something is wrong. Please fill the form again.");
-      } else {
-        //  var apiUrl = "http://your-api-url.com?input1=" + encodeURIComponent(origin) + "&input2=" + encodeURIComponent(destination)+
-        //     "&input3=" + encodeURIComponent(depart)+ "&input4=" + encodeURIComponent(returnD)+ "&input5=" +
-        //     encodeURIComponent(adults)+ "&input6=" + encodeURIComponent(children);
-        //     fetch(apiUrl)
-        //     .then(response => response.json())
-        //     .then(data => {
+      } else { // comment
+        // const params = new URLSearchParams();
+        // params.append("destination", destination);
+        // params.append("checkIn", checkIn);
+        // params.append("checkOut", checkOut);
+        // params.append("people", people);
         
-
+        // var apiUrl = "http://your-api-url.com?" + params.toString();
+        // fetch(apiUrl)
+        //   .then(function (response) {
+        //     if (!response.ok) {
+        //       throw new Error("Network response was not ok");
+        //     }
+        //     return response.json();
+        //   })
+        //   .then((data) => {
+            // comment
         data = mockData;
         var resultsDiv = document.getElementById("results");
         resultsDiv.innerHTML = "";
@@ -163,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "<div class='carousel-inner'>"
             );
 
-            // Add carousel items for each picture in the hotel.pictures array
+            
             for (var i = 0; i < suite.pictures.length; i++) {
               newWindow.document.write(
                 "<div id='image' class='carousel-item" +
@@ -189,7 +197,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "</div>"
             );
 
-            // Add unordered list of facility
+          
             newWindow.document.write("<h3>Facility :</h3>");
             newWindow.document.write("<ul class='facility-list'>");
             suite.facilty.forEach(function (facility) {
@@ -384,7 +392,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 newWindow2.document.write("data.push(formData);");
                 newWindow2.document.write("}");
 
-                newWindow2.document.write("console.log(data);"); // Modify this line to send data to your Django backend
+                
 
                 // newWindow2.document.write(`fetch('/your-django-endpoint', {
                 //   method: 'POST',
@@ -444,10 +452,10 @@ document.addEventListener("DOMContentLoaded", function () {
           }
 
           var spacerElement = document.createElement("div");
-          spacerElement.style.flexGrow = "1"; // Add this line to create flexible space
+          spacerElement.style.flexGrow = "1"; 
 
           eDiv.appendChild(priceElement);
-          eDiv.appendChild(spacerElement); // Add the spacer element
+          eDiv.appendChild(spacerElement); 
           eDiv.appendChild(reserveButton);
 
           suiteDiv.appendChild(logoDiv);
@@ -457,7 +465,12 @@ document.addEventListener("DOMContentLoaded", function () {
           resultsDiv.appendChild(suiteDiv);
         });
 
-        // })
+  // comment
+          // })
+          // .catch(function (error) {
+          //   showToast(error);
+          // });
+        // comment
       }
     });
 });
